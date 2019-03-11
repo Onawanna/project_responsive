@@ -1,0 +1,273 @@
+/* set up universal box padding */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Set up media queries */
+@media screen and (min-width: 576px) {
+  #main {
+    flex-direction: row;
+  }
+  #main > nav,
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+}
+
+@media screen
+and (orientation: landscape)
+and (min-width: 414px)
+and (max-width: 736px) {
+#main-image {
+  display: none;
+  flex-direction: row;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+.container {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    column-gap: 1%;
+    grid-row-gap: 1%;
+    width: 88%;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    }
+}
+
+ /* set up nav */
+ul {
+	list-style-type: none;
+	margin: 50;
+	overflow: scroll;
+	margin-bottom: 20px; /* space between header and content */
+	background-color: #224854
+  }
+
+  li {
+	float: left;
+  }
+
+  li a {
+	display: block;
+	color: #224463;;
+	text-align: left;
+	padding: 24px 16px;
+	text-decoration: underline;
+	font-family: "Roboto", "Lato", "Open Sans", sans-serif;
+	font-size: 24px;
+  }
+
+.current{text-transform: uppercase;
+  text-decoration: none;
+	background-color: #182036;
+	color: #ffffff;
+}
+
+
+header{background-color: #ffffff;}
+
+body{
+    background-color:#ffffff;
+}
+
+li{
+	text-decoration: none;
+	display:inline;
+	background-color:#ffffff;
+	color: #182036;
+}
+a {color: #204E5F}
+
+/* *******add code to make skip to content hidden unless in focus ****** */
+.skip{
+  margin: 10px;
+  text-decoration: none;
+  position: relative;
+    top: -80px;
+    transition: top ease-in 0.5s;
+  }
+.skip:focus{
+  background:#ffffff;
+  top: 0px;
+  border: 1px solid #224463;
+}
+/* *********************Set up fonts*********************** */
+h1,
+p {
+  color: #224463;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family:sans-serif;;
+}
+a {
+  color: #224463;
+}
+a:hover {
+  color: #8F1D2C;
+}
+h1 {
+  font-size: 6em;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.byline {
+  color: #182036;
+  font-family: "Roboto", "Lato", "Open Sans", sans-serif;
+  font-style:small caps;
+  margin-bottom: 18px;
+}
+
+h2,
+p {
+  color: #182036;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family:sans-serif;;
+}
+a {
+  color: #182036;
+}
+a:hover {
+  color: #8F1D2C;
+}
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.byline {
+  color: #182036;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family:sans-serif;
+  font-style:small caps;
+  margin-bottom: 18px;
+}
+
+p,
+p {
+  color: #182036;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family:sans-serif;
+  }
+a:hover {
+  color: #8F1D2C;
+}
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.byline {
+  color: #182036;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style:small caps;
+  margin-bottom: 18px;
+}
+
+/* **************Setting up index content alignment************ */
+.mainbox{
+  display: inline-flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: 8px;
+}
+
+  .profilepic{
+    align-items: top left;
+  }
+    img{
+    width: 450px;
+    max-width: 100%;
+    max-height: 450px;
+    }
+
+  .about{
+    align-items: top right;
+  }
+.mainbox{
+  display: block;
+  width: 80%;
+  margin: 8px;
+}
+
+  .quote1{
+    align-items: center;
+    margin: 8px;
+  }
+
+  .quote2{
+    align-items: center;
+    margin: 8px;
+  }
+
+  .fontawesome{
+    align-items: center;
+    margin: 8px;
+  }
+
+
+/* **********photo grid********************* */
+.flex-container{
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-direction: 3 column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flexphoto{
+  object-fit: contain;
+  align-self: flex-start;
+  width:auto;
+  height: auto;
+}
+
+  /*max-width: 25%;
+  max-height: 25%:
+  margin: 0 50px 20px 50px;
+}*/
+
+/* *************set up icons******************* */
+.fontawesome{
+  ont-size: 12em;
+  color: FF0044;
+}
+/* *******set up background image********* */
+
+.backimg{
+  /* figure { */
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/ferriswhell.jpg);
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%:
+}
+
+/* ******* video layout ********* */
+.video{
+  box-sizing: border-box;
+  align-items: center;
+  margin: 8px;
+  width: 560;
+  height: 315;
+}
